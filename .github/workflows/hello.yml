@@ -1,0 +1,26 @@
+name: Primeira Action
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  hello:
+    name: Executar exemplo
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar o código do repositório
+        uses: actions/checkout@v4
+
+      - name: Exibir mensagem
+        run: echo "Olá, GitHub Actions!"
+
+      - name: Mostrar informações da execução
+        run: |
+          echo "Repositório: $GITHUB_REPOSITORY"
+          echo "Branch ou tag: $GITHUB_REF"
+          echo "Commit: $GITHUB_SHA"
+          echo "Evento: $GITHUB_EVENT_NAME"

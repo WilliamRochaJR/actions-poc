@@ -35,6 +35,33 @@ on:
   #   types:
   #     - executar-poc
 
+# Permissões do GITHUB_TOKEN usado pelo workflow.
+# Descomente somente as necessárias e aplique o princípio do menor privilégio.
+# Quando uma permissão é declarada, as não declaradas passam a valer `none`.
+#
+# permissions:
+#   actions: read              # Ler execuções e artefatos. Aceita read, write ou none.
+#   artifact-metadata: read    # Ler metadados de artefatos. Aceita read, write ou none.
+#   attestations: read         # Ler atestações de artefatos. Aceita read, write ou none.
+#   checks: read               # Ler check runs e check suites. Aceita read, write ou none.
+#   code-quality: read         # Ler dados de qualidade e cobertura. Aceita read, write ou none.
+#   contents: read             # Ler o código e os commits. Aceita read, write ou none.
+#   deployments: read          # Ler deployments. Aceita read, write ou none.
+#   discussions: read          # Ler discussões. Aceita read, write ou none.
+#   id-token: none             # Gerar token OIDC. Aceita apenas write ou none.
+#   issues: read               # Ler issues. Aceita read, write ou none.
+#   packages: read             # Ler pacotes. Aceita read, write ou none.
+#   pages: read                # Ler informações do GitHub Pages. Aceita read, write ou none.
+#   pull-requests: read        # Ler pull requests. Aceita read, write ou none.
+#   security-events: read      # Ler eventos do code scanning. Aceita read, write ou none.
+#   statuses: read             # Ler status de commits. Aceita read, write ou none.
+#   vulnerability-alerts: read # Ler alertas do Dependabot. Aceita apenas read ou none.
+#
+# Formas abreviadas (use apenas uma delas no lugar do bloco acima):
+# permissions: read-all  # Concede leitura a todas as permissões disponíveis.
+# permissions: write-all # Concede escrita a todas as permissões disponíveis.
+# permissions: {}        # Remove todas as permissões do GITHUB_TOKEN.
+
 jobs:
   hello:
     name: Executar exemplo

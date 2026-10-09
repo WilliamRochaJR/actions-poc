@@ -1,10 +1,39 @@
 name: Primeira Action
 
 on:
+  # Permite iniciar o workflow manualmente pela aba Actions.
   workflow_dispatch:
+
+  # Executa quando commits são enviados para a branch main.
   push:
     branches:
       - main
+
+  # Outros gatilhos comuns (descomente para testar):
+
+  # Executa quando um pull request direcionado à main é aberto ou atualizado.
+  # pull_request:
+  #   branches:
+  #     - main
+
+  # Executa em um horário agendado usando cron em UTC.
+  # schedule:
+  #   - cron: "0 12 * * 1-5"
+
+  # Executa quando uma issue é aberta.
+  # issues:
+  #   types:
+  #     - opened
+
+  # Executa quando uma release é publicada.
+  # release:
+  #   types:
+  #     - published
+
+  # Permite que outro sistema inicie o workflow pela API do GitHub.
+  # repository_dispatch:
+  #   types:
+  #     - executar-poc
 
 jobs:
   hello:

@@ -35,9 +35,13 @@ on:
   #   types:
   #     - executar-poc
 
-# Permissões do GITHUB_TOKEN usado pelo workflow.
+# Permissão mínima necessária para o actions/checkout ler o repositório.
+# Como uma permissão foi declarada, todas as demais passam a valer `none`.
+permissions:
+  contents: read
+
+# Outras permissões disponíveis para o GITHUB_TOKEN.
 # Descomente somente as necessárias e aplique o princípio do menor privilégio.
-# Quando uma permissão é declarada, as não declaradas passam a valer `none`.
 #
 # permissions:
 #   actions: read              # Ler execuções e artefatos. Aceita read, write ou none.
